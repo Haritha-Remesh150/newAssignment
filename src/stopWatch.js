@@ -32,6 +32,7 @@ const Stopwatch = () => {
 
   return (
     <div className="card">
+      <h1 className="heading">Stopwatch</h1>
       <div className="stopwatch-card">
         <h1>{new Date(time).toISOString().slice(11, 19)}</h1>
       </div>
