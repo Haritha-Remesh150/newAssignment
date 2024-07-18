@@ -1,26 +1,56 @@
-.stopwatch {
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 12px 12px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20% auto;
+    padding: 20px;
     text-align: center;
-    margin-top: 20%;
+  }
+  
+  .stopwatch-card {
+    background-color: #afb4e9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
   }
   
   .buttons {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
   }
   
-  button {
+  .button {
     padding: 10px 20px;
-    margin: 0 5px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px;
-    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    color: white;
   }
   
-  button:focus {
+  .start {
+    background-color: blue;
+  }
+  
+  .pause {
+    background-color: red;
+  }
+  
+  .stop {
+    background-color: orange;
+  }
+  
+  .reset {
+    background-color: green;
+  }
+  
+  .button:focus {
     outline: none;
   }
   
-  button:hover {
-    background-color: #ddd;
+  .button:hover {
+    opacity: 0.8;
   }
   

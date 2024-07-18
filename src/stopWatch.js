@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './Stopwatch.css'; // Create this CSS file for styling
+import './Stopwatch.css';
 
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
@@ -21,6 +21,7 @@ const Stopwatch = () => {
   const handleStop = () => {
     clearInterval(intervalRef.current);
     setRunning(false);
+    setTime(0);
   };
 
   const handleReset = () => {
@@ -30,12 +31,16 @@ const Stopwatch = () => {
   };
 
   return (
-    <div className="stopwatch">
-      <h1>{new Date(time).toISOString().slice(11, 19)}</h1>
+    <div className="card">
+      <div className="stopwatch-card">
+        <h1>{new Date(time).toISOString().slice(11, 19)}</h1>
+      </div>
       <div className="buttons">
-        <button onClick={handleStartPause}>{running ? 'Pause' : 'Start'}</button>
-        <button onClick={handleStop}>Stop</button>
-        <button onClick={handleReset}>Reset</button>
+        <button className={`button ${running ? 'pause' : 'start'}`} onClick={handleStartPause}>
+          {running ? 'Pause' : 'Start'}
+        </button>
+        <button className="button stop" onClick={handleStop}>Stop</button>
+        <button className="button reset" onClick={handleReset}>Reset</button>
       </div>
     </div>
   );
