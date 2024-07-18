@@ -1,0 +1,26 @@
+.stopwatch {
+    text-align: center;
+    margin-top: 20%;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: aquamarine;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
